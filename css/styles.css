@@ -91,11 +91,19 @@ h2.title{
 	font-weight: 1200;
 }
 
-h3.subtitle{
+h3.subtitle-wht{
 	color: #FFFFFF;
 	font-family: Garamond;
 	font-size: 30px;
 	font-weight: 300;
+}
+
+h3.subtitle{
+	color: #000000;
+	font-family: Garamond;
+	font-size: 30px;
+	font-weight: 300;
+	text-align: center;
 }
 
 .section-title{
@@ -106,22 +114,99 @@ h3.subtitle{
 
 
 
-.first-row, .second-row, .third-row{
+.first-row, .second-row, .third-row, .main, .divided-section{
 	background-color: #FAEFE0;
 	display: flex;
 	padding-left: 50px; padding-right: 50px; padding-top: 20px; padding-bottom: 20px;
 }
 
-div.row-left, div.row-right{
+.main{
+	text-align: center;
+}
+.divided-section, .bottom-form{
+	text-align: left;
+}
+
+div.row-left, div.row-right, .left-form, .right-form{
 	width: 50%;
 	padding-inline: 20px;
 	background-color: #FAEFE0;
+	align-content: center;
 }
 
+div.row-left-centered, div.row-right-centered{
+	width: 50%;
+	padding-inline: 20px;
+	background-color: #FAEFE0;
+	align-content: center;
+	text-align: center;
+	border: 3px solid black;
+}
+
+.articles-grid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	padding-left: 50px; padding-right: 50px;
+}
+
+.article{
+	background-color: #F1D2A7;
+	padding: 20px;
+}
+
+.article-first-line{
+	display: flex;
+	width: 100%;
+	gap: 20px;
+	font-size: 0.8rem;
+	text-align: right;
+	line-height: 0.5rem;
+}
+
+.article-title{
+	font-family: Garamond;
+	font-size: 20px;
+	line-height: 0.5rem;
+}
+
+.article-desc{
+	font-size: 0.9rem;
+	text-align: justify;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient : vertical;
+	overflow: hidden;
+}
+
+.article-btn{
+	background-color: #4E032A;
+	padding-left: 20px; padding-right: 20px; padding-top: 5px; padding-bottom: 5px;
+	border: 0px;
+	font-family: Montserrat;
+	color: #FFFFFF;
+	align-content: right;
+	border-radius: 2px;
+}
+
+.article-btn:hover{
+	background-color: #3B0220;
+	border: 0px;
+	font-family: Montserrat;
+}
 
 img.section-img{
 	display: block;
 	width: 99%;
+	position: center;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+img.article-img{
+	display: block;
+	width: 100%;
+	height: auto;
 	position: center;
 	background-size: cover;
 	margin: 0 auto;
