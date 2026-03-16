@@ -19,6 +19,7 @@ body{
 
 .header-right{
 	width: 54%;
+	text-align : right;
 }
 
 .header-title{
@@ -138,6 +139,8 @@ footer.footer{
 	text-align: center;
 	display: flex;
 	align-items: center;
+	align-content : center;
+	width : 100%;
 }
 
 footer.footer p:first-of-type{
@@ -149,18 +152,21 @@ footer.footer p:first-of-type{
 	width: 35%;
 	align-items: top;
 	text-align: center;
+	border : 3px solid black; 
 }
 
 .footer .second-column,.fourth-column{
 	width: 15%;
-	align-items: top;
-	text-align: left;
+	align-items: center;
+	text-align: center;
+	border : 3px solid black; 
 }
 
 .footer .third-column{
 	width: 22%;
 	align-items: top;
-	text-align: left;
+	text-align: center;
+	border : 3px solid black; 
 }
 
 nav.footer-nav ul li.footer-btn, nav.footer-nav ul li.footer-btn-active{
