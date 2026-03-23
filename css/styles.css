@@ -356,7 +356,7 @@ nav.footer-nav ul li.footer-btn:hover a{
 
 /* CARTE */
 .map{
-	
+
 }
 /* COLONNES */
 .left, .right{
@@ -367,14 +367,14 @@ nav.footer-nav ul li.footer-btn:hover a{
 .form{
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 5px;
 	max-width: 600px;
 }
 
 /* LIGNES (2 colonnes) */
 .row{
 	display: flex;
-	gap: 15px;
+	gap: 25px;
 }
 
 /* CHAMPS */

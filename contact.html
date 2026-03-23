@@ -6,6 +6,17 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<!-- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+	<script>(function(){emailjs.init("TON_PUBLIC_KEY");})();</script>
+	<script>document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+	emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', this)
+        .then(function() {
+            alert("Message envoyé !");
+        }, function(error) {
+            alert("Erreur : " + error.text);
+        });});
+	</script> -->
 	<title>Cercle Numismatique de Nîmes</title>
 </head>
 <body>
@@ -61,28 +72,28 @@
     	<div class="right">
         	<h3 class="subtitle">Contactez-nous</h3>
 
-        	<div class="form">
+        	<form class="form" id="contact-form" action="" method="post" enctype="text/plain">
 
 	            <div class="row">
 	                <div class="group">
 	                    <label>Prénom</label>
-	                    <input type="text">
+	                    <input type="text" name="name">
 	                </div>
 	                <div class="group">
 	                    <label>Nom</label>
-	                    <input type="text">
+	                    <input type="text" name="surname">
 	                </div>
 	            </div>
 
 	            <div class="row">
 	                <div class="group">
 	                    <label>Email</label>
-	                    <input type="email">
+	                    <input type="email" name="email">
 	                </div>
 	                <div class="group">
 	                    <label>Téléphone</label>
 	                    <div class="phone">
-	                        <select>
+	                        <select name="phone-id">
 	                        	<option value="+355">ALB - Albanie (+355)</option>
     							<option value="+49">ALL - Allemagne (+49)</option>
 								<option value="+376">AND - Andorre (+376)</option>
@@ -130,19 +141,19 @@
 							    <option value="+380">UKR - Ukraine (+380)</option>
 							    <option value="+379">VAT - Vatican (+379)</option>
 	                        </select>
-	                        <input type="tel" placeholder="Numéro">
+	                        <input type="tel" placeholder="Numéro" name="phone">
 	                    </div>
 	                </div>
 	            </div>
 
 	            <div class="group">
 	                <label>Message</label>
-	                <textarea></textarea>
+	                <textarea name="message"></textarea>
 	            </div>
 
-	            <button class="base-btn">Envoyer votre message</button>
+	            <button class="base-btn" type="submit">Envoyer votre message</button>
 
-        	</div>
+        	</form>
     	</div>
 
 	</div>
