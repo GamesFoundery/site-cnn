@@ -150,7 +150,7 @@ div.row-left-centered, div.row-right-centered{
 .articles-grid{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 10px;
+	gap: 20px;
 	padding-left: 50px; padding-right: 50px;
 	padding-bottom: 100px;
 }
@@ -158,6 +158,7 @@ div.row-left-centered, div.row-right-centered{
 .article{
 	background-color: #F1D2A7;
 	padding: 20px;
+	border-radius: 5px;
 }
 
 .article-first-line{
@@ -223,6 +224,7 @@ img.article-img{
 	position: center;
 	background-size: cover;
 	margin: 0 auto;
+	border-radius: 2px;
 }
 
 p.section-text{
@@ -393,7 +395,7 @@ nav.footer-nav ul li.footer-btn:hover a{
 input, textarea, select{
 	width: 100%;
 	padding: 10px;
-	border: 1px solid #ccc;
+	border: 1px solid #FAEFE0;
 	border-radius: 5px;
 }
 
