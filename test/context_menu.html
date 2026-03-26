@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Hamburger</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #333;
+      color: white;
+      position: relative;
+    }
+
+    /* Menu classique (caché sur mobile) */
+    nav {
+      display: none;
+    }
+
+    /* Bouton hamburger */
+    .menu-toggle {
+      width: 30px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .menu-toggle span {
+      display: block;
+      height: 4px;
+      background: white;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* Animation en croix */
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(9px, 9px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Menu latéral */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50%;
+      height: 100vh;
+      background: #444;
+      padding: 60px 20px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .side-menu.active {
+      right: 0;
+    }
+
+    .side-menu ul {
+      list-style: none;
+    }
+
+    .side-menu li {
+      margin: 20px 0;
+    }
+
+    .side-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Optionnel : fond sombre derrière */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mon Site</h1>
+
+  <!-- Bouton hamburger -->
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<!-- Menu latéral -->
+<div class="side-menu" id="sideMenu">
+  <ul>
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('sideMenu');
+  const overlay = document.getElementById('overlay');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    menu.classList.toggle('active');
+    overlay.classList.toggle('active');
+  });
+
+  overlay.addEventListener('click', () => {
+    toggle.classList.remove('active');
+    menu.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
