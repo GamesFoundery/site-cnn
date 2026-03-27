@@ -184,3 +184,92 @@ h3.subtitle{
 	padding-bottom: 100px;
 	}
 }
+
+/* --- STYLE FOOTER MOBILE (4 LIGNES) --- */
+@media (max-width: 768px) {
+  footer.footer {
+    flex-direction: column; /* Empile les colonnes verticalement */
+    gap: 10px; /* Espace entre chaque ligne */
+    padding: 40px 25px; /* Plus d'espace interne */
+    text-align: center; /* Centre tout le texte par défaut */
+    align-items: center; /* Centre les blocs horizontalement */
+  }
+
+  /* Chaque colonne devient une ligne pleine largeur */
+  .footer .first-column,
+  .footer .second-column,
+  .footer .third-column,
+  .footer .fourth-column {
+    width: 100%; /* Prend toute la largeur disponible */
+    text-align: center; /* Centre le texte dans la ligne */
+    padding: 0; /* Reset des padding spécifiques desktop */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu interne */
+  }
+
+  /* Ajustement du titre dans la 1ère ligne */
+  .footer .first-column .header-title {
+    text-align: center;
+    font-size: 18px; /* Taille adaptée mobile */
+    margin-bottom: 10px;
+  }
+
+  /* Ajustement du menu de navigation (2ème ligne) */
+  .footer .second-column {
+    align-items: center; /* Centre la liste */
+  }
+  
+  nav.footer-nav ul {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column; /* Liste verticale */
+    gap: 15px; /* Espace entre les liens */
+    width: 100%;
+  }
+
+  nav.footer-nav ul li.footer-btn, 
+  nav.footer-nav ul li.footer-btn-active {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  /* Bordure à gauche pour les liens mobiles (optionnel, ou mettre en bas) */
+  nav.footer-nav ul li.footer-btn a,
+  nav.footer-nav ul li.footer-btn-active a {
+    display: inline-block;
+    border-left: 3px solid #4F4F4F;/* On enlève la barre verticale desktop */
+    padding-left: 5px;
+    padding-bottom: 5px;
+  }
+  
+  nav.footer-nav ul li.footer-btn-active a {
+    border-left: 3px solid #000000;
+  }
+
+  /* Ajustement de l'adresse (3ème ligne) */
+  .footer .third-column {
+    line-height: 1.6; /* Meilleure lisibilité */
+  }
+  .footer .third-column p {
+    margin-bottom: 5px;
+  }
+
+  /* Ajustement des boutons et réseaux sociaux (4ème ligne) */
+  .footer .fourth-column {
+    gap: 20px;
+    padding: 0;
+  }
+  
+  /* Centrer le bouton contact */
+  .footer .fourth-column .base-btn {
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  /* Centrer les icônes sociales */
+  .socials {
+    justify-content: center; /* Déjà présent, mais renforcé */
+  }
+}
