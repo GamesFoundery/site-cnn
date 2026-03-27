@@ -51,9 +51,12 @@
 	</header>
 
 	<div class="side-menu" id="sideMenu">
+		<div class="close-menu-btn" id="closeMenuBtn" style="position: absolute; top: -15px; right: 15px; color: white; font-size: 85px; cursor: pointer; z-index: 3000;">
+        &times;
+    	</div>
 	  	<ul>
 			<li class="btn-active">
-				<a href="#">
+				<a href="#" class="link-active">
 						Accueil
 				</a>
 			</li>
@@ -81,17 +84,33 @@
 	  const menu = document.getElementById('sideMenu');
 	  const overlay = document.getElementById('overlay');
 
-	  toggle.addEventListener('click', () => {
+	  // Ouvrir/Fermer le menu
+	  toggle.addEventListener('click', (e) => {
+	    e.stopPropagation(); // Empêche le clic de traverser
 	    toggle.classList.toggle('active');
 	    menu.classList.toggle('active');
 	    overlay.classList.toggle('active');
 	  });
 
+	  // Fermer quand on clique sur l'overlay (le fond sombre)
 	  overlay.addEventListener('click', () => {
 	    toggle.classList.remove('active');
 	    menu.classList.remove('active');
 	    overlay.classList.remove('active');
 	  });
+
+	  // IMPORTANT : Empêcher la fermeture quand on clique DANS le menu
+	  menu.addEventListener('click', (e) => {
+	    e.stopPropagation();
+	  });
+	  const closeBtn = document.getElementById('closeMenuBtn');
+		if(closeBtn) {
+    	closeBtn.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+        overlay.classList.remove('active');
+    	});
+	}
 	</script>
 
 	<div class="site-body">
@@ -111,7 +130,7 @@
 				<img src="img/header-bg.jpg" class="article-img">
 				<div class="article-first-line">
 					<p class="article-author">
-						Cercle Numismatique de Nîmes
+						<strong>Cercle Numismatique de Nîmes</strong>
 					</p>
 					<p class="article-date">
 						25/03/2026

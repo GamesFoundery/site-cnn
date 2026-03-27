@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles_phone.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<title>Cercle Numismatique de Nîmes</title>
@@ -40,9 +41,77 @@
 					</li>
 				</ul>
 			</nav>
+			<div class="menu-toggle" id="menuToggle">
+			    <span></span>
+			    <span></span>
+			    <span></span>
+  			</div>
 		</div>
 		
 	</header>
+
+	<div class="side-menu" id="sideMenu">
+		<div class="close-menu-btn" id="closeMenuBtn" style="position: absolute; top: -15px; right: 15px; color: white; font-size: 85px; cursor: pointer; z-index: 3000;">
+        &times;
+    	</div>
+	  	<ul>
+			<li class="btn">
+				<a href="../index.html">
+						Accueil
+				</a>
+			</li>
+			<li class="btn">
+				<a href="../news.html">
+					Actualités
+				</a>
+			</li>
+			<li class="btn">
+				<a href="../articles.html">
+					Articles
+				</a>
+			</li>
+			<li class="btn">
+				<a href="../about.html">
+					à propos
+				</a>
+				</li>
+		</ul>
+	</div>
+
+	<div class="overlay" id="overlay"></div>
+	<script>
+	  const toggle = document.getElementById('menuToggle');
+	  const menu = document.getElementById('sideMenu');
+	  const overlay = document.getElementById('overlay');
+
+	  // Ouvrir/Fermer le menu
+	  toggle.addEventListener('click', (e) => {
+	    e.stopPropagation(); // Empêche le clic de traverser
+	    toggle.classList.toggle('active');
+	    menu.classList.toggle('active');
+	    overlay.classList.toggle('active');
+	  });
+
+	  // Fermer quand on clique sur l'overlay (le fond sombre)
+	  overlay.addEventListener('click', () => {
+	    toggle.classList.remove('active');
+	    menu.classList.remove('active');
+	    overlay.classList.remove('active');
+	  });
+
+	  // IMPORTANT : Empêcher la fermeture quand on clique DANS le menu
+	  menu.addEventListener('click', (e) => {
+	    e.stopPropagation();
+	  });
+	  const closeBtn = document.getElementById('closeMenuBtn');
+		if(closeBtn) {
+    	closeBtn.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+        overlay.classList.remove('active');
+    	});
+	}
+	</script>
 	
 	<div class="article-page">
 	<style>

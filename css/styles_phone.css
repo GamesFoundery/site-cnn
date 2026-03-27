@@ -4,7 +4,7 @@
 	padding-left: 25px; padding-right: 25px; padding-top: 20px; padding-bottom: 20px;
 	display: flex;
 	position: relative;
-	z-index: 2000;
+	z-index: 100;
 	}
 	nav.header-nav{
 		display: none;
@@ -17,45 +17,51 @@
       flex-direction: column;
       justify-content: space-between;
       cursor: pointer;
-      z-index: 3000;
+      z-index: 4000; /* Augmenté pour être sûr d'être au-dessus du menu (2000) */
       margin-left: auto;
+      position: relative; 
+      pointer-events: auto; /* S'assure qu'il reste cliquable */
     }
 
     .menu-toggle span {
       display: block;
-      height: 4px;
+      height: 5px;
       background: black;
-      border-radius: 2px;
+      border-radius: 0px;
       transition: 0.3s;
     }
-
-    /* Animation en croix */
-    .menu-toggle.active span:nth-child(1) {
-      transform: rotate(45deg) translate(9px, 9px);
-      background: white;
-    }
-
-    .menu-toggle.active span:nth-child(2) {
+    .menu-toggle.active span{
       opacity: 0;
       background: white;
     }
 
+    /* Animation en croix */
+    /*.menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(9px, 9px);
+      background: white;
+    }
+
+    
+
     .menu-toggle.active span:nth-child(3) {
       transform: rotate(-45deg) translate(6px, -6px);
       background: white;
-    }
+    }*/
     .side-menu {
       position: fixed;
       top: 0;
       right: -100%;
-      width: 50%;
+      width: 60%; 
       height: 100vh;
       background: rgba(0, 0, 0, 0.5);
-      padding: 60px 20px;
+      padding: 80px 20px; 
       transition: right 0.3s ease;
-      z-index: 1000;
+      z-index: 2000; 
       text-transform: uppercase;
       display: flex;
+      box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+      /* AJOUT IMPORTANT : S'assurer que le menu n'interfère pas avec le clic du bouton */
+      pointer-events: auto; 
     }
 
     .side-menu.active {
@@ -72,15 +78,20 @@
     }
 
     .side-menu a{
-      color: #DEDEDE;
+      color: #A7A7A7;
       text-decoration: none;
-      border-left: 3px #DEDEDE solid;
+      border-left: 3px #A7A7A7 solid;
       padding-left: 5px;
       font-weight: bold;
     }
 
     .side-menu a:hover{
     	color: #DADADA;
+    }
+
+    .side-menu a.link-active{
+    	color: #FFFFFF;
+    	border-left: 3px #FFFFFF solid;
     }
 
     .btn-active{
@@ -100,13 +111,14 @@
       opacity: 0;
       pointer-events: none;
       transition: 0.3s;
-      z-index: 2500;
+      z-index: 1500;
     }
 
     .overlay.active {
       opacity: 1;
       pointer-events: all;
     }
+
 }
 
 /* Textes & titres */
