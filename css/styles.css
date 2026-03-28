@@ -460,4 +460,19 @@ button{
 .article-page{
 }
 
+.link{
+	color: #4E032A;
+	text-decoration: none;
+}
+
+.list{
+	color: #000000;
+	text-decoration: none;
+	padding-left: 40px;
+}
+
+.list li{
+	list-style-type: square;
+	padding-bottom: 20px;
+}
 
