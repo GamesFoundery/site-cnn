@@ -8,10 +8,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<title>Cercle Numismatique de Nîmes</title>
+	<link rel="icon" type="image/jpg" href="img/logo_blc.ico">
 </head>
 <body>
 	<header class="header">
 		<div class="header-left">
+			<img src="img/logo_nr.png" class="logo">
 			<h3 class="header-title">
 				CERCLE NUMISMATIQUE DE NÎMES
 			</h3>
@@ -134,79 +136,79 @@
 
 	            <div class="row">
 	                <div class="group">
-	                    <label>Prénom</label>
-	                    <input type="text" name="Prénom" required>
+	                    <label>Prénom *</label>
+	                    <input type="text" name="Prénom" required placeholder="Ernest">
 	                </div>
 	                <div class="group">
-	                    <label>Nom</label>
-	                    <input type="text" name="Nom" required>
+	                    <label>Nom *</label>
+	                    <input type="text" name="Nom" required placeholder="Babelon">
 	                </div>
 	            </div>
 
 	            <div class="row">
 	                <div class="group">
-	                    <label>Email</label>
-	                    <input type="email" name="Email" required>
+	                    <label>Email *</label>
+	                    <input type="email" name="Email" required placeholder="ernest.babelon@numismatique.fr">
 	                </div>
 	                <div class="group">
-	                    <label>Téléphone</label>
+	                    <label>Téléphone *</label>
 	                    <div class="phone">
-	                        <select name="Indicateur" required>
-	                        	<option value="+355">ALB - Albanie (+355)</option>
-    							<option value="+49">ALL - Allemagne (+49)</option>
-								<option value="+376">AND - Andorre (+376)</option>
-							    <option value="+43">AUT - Autriche (+43)</option>
-							    <option value="+32">BEL - Belgique (+32)</option>
-							    <option value="+375">BIE - Biélorussie (+375)</option>
-							    <option value="+387">BOS - Bosnie-Herzégovine (+387)</option>
-							    <option value="+359">BUL - Bulgarie (+359)</option>
-							    <option value="+357">CHY - Chypre (+357)</option>
-							    <option value="+385">CRO - Croatie (+385)</option>
-							    <option value="+45">DAN - Danemark (+45)</option>
-							    <option value="+34">ESP - Espagne (+34)</option>
-							    <option value="+372">EST - Estonie (+372)</option>
-							    <option value="+358">FIN - Finlande (+358)</option>
-							    <option value="+33">FRA - France (+33)</option>
-							    <option value="+30">GRE - Grèce (+30)</option>
-							    <option value="+36">HON - Hongrie (+36)</option>
-							    <option value="+353">IRL - Irlande (+353)</option>
-							    <option value="+354">ISL - Islande (+354)</option>
-							    <option value="+39">ITA - Italie (+39)</option>
-							    <option value="+383">KOS - Kosovo (+383)</option>
-							    <option value="+371">LET - Lettonie (+371)</option>
-							    <option value="+423">LIE - Liechtenstein (+423)</option>
-							    <option value="+370">LIT - Lituanie (+370)</option>
-							    <option value="+352">LUX - Luxembourg (+352)</option>
-							    <option value="+389">MAC - Macédoine du Nord (+389)</option>
-							    <option value="+356">MAL - Malte (+356)</option>
-							    <option value="+373">MOL - Moldavie (+373)</option>
-							    <option value="+377">MON - Monaco (+377)</option>
-							    <option value="+382">MON - Monténégro (+382)</option>
-							    <option value="+47">NOR - Norvège (+47)</option>
-							    <option value="+31">PBA - Pays-Bas (+31)</option>
-							    <option value="+48">POL - Pologne (+48)</option>
-							    <option value="+351">POR - Portugal (+351)</option>
-							    <option value="+420">RTC - République tchèque (+420)</option>
-							    <option value="+40">ROU - Roumanie (+40)</option>
-							    <option value="+44">R-U - Royaume-Uni (+44)</option>
-							    <option value="+7">RUS - Russie (+7)</option>
-							    <option value="+378">SMR - Saint-Marin (+378)</option>
-							    <option value="+381">SER - Serbie (+381)</option>
-							    <option value="+421">SLO - Slovaquie (+421)</option>
-							    <option value="+386">SLO - Slovénie (+386)</option>
-							    <option value="+46">SUE - Suède (+46)</option>
-							    <option value="+41">SUI - Suisse (+41)</option>
-							    <option value="+380">UKR - Ukraine (+380)</option>
-							    <option value="+379">VAT - Vatican (+379)</option>
-	                        </select>
-	                        <input type="phone" placeholder="Numéro" name="Numéro" required>
+	                        <!-- <select name="Indicateur" required>
+	                        	<option value="+355">+355</option>
+    							<option value="+49">+49</option>
+								<option value="+376">+376</option>
+							    <option value="+43">+43</option>
+							    <option value="+32">+32</option>
+							    <option value="+375">+375</option>
+							    <option value="+387">+387</option>
+							    <option value="+359">+359</option>
+							    <option value="+357">+357</option>
+							    <option value="+385">+385</option>
+							    <option value="+45">+45</option>
+							    <option value="+34">+34</option>
+							    <option value="+372">+372</option>
+							    <option value="+358">+358</option>
+							    <option value="+33">+33</option>
+							    <option value="+30">+30</option>
+							    <option value="+36">+36</option>
+							    <option value="+353">+353</option>
+							    <option value="+354">+354</option>
+							    <option value="+39">+39</option>
+							    <option value="+383">+383</option>
+							    <option value="+371">+371</option>
+							    <option value="+423">+423</option>
+							    <option value="+370">+370</option>
+							    <option value="+352">+352</option>
+							    <option value="+389">+389</option>
+							    <option value="+356">+356</option>
+							    <option value="+373">+373</option>
+							    <option value="+377">+377</option>
+							    <option value="+382">+382</option>
+							    <option value="+47">+47</option>
+							    <option value="+31">+31</option>
+							    <option value="+48">+48</option>
+							    <option value="+351">+351</option>
+							    <option value="+420">+420</option>
+							    <option value="+40">+40</option>
+							    <option value="+44">+44</option>
+							    <option value="+7">+7</option>
+							    <option value="+378">+378</option>
+							    <option value="+381">+381</option>
+							    <option value="+421">+421</option>
+							    <option value="+386">+386</option>
+							    <option value="+46">+46</option>
+							    <option value="+41">+41</option>
+							    <option value="+380">+380</option>
+							    <option value="+379">+379</option>
+	                        </select> -->
+	                        <input type="phone" placeholder="0601020304" name="Numéro" required>
 	                    </div>
 	                </div>
 	            </div>
 
 	            <div class="group">
-	                <label>Message</label>
-	                <textarea name="Message" required></textarea>
+	                <label>Message *</label>
+	                <textarea name="Message" required placeholder="Bonjour, je voudrais assister à une de vos réunion comment faire ?"></textarea>
 	            </div>
 
 	            <button class="base-btn" type="submit">
