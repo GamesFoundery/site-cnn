@@ -81,7 +81,7 @@ div.site-body{
 }
 
 div.hero-header{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/header-bg.jpg");
+	background-image: url("../img/header-bg.jpg");
 	background-size: cover;
 	background-position: center;
 	height: 50rem;
@@ -394,14 +394,14 @@ nav.footer-nav ul li.footer-btn:hover a{
 .form{
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
+	gap: 1rem;
 	max-width: 600px;
 }
 
 /* LIGNES (2 colonnes) */
 .row{
 	display: flex;
-	gap: 25px;
+	gap: 1rem;
 }
 
 /* CHAMPS */
@@ -425,7 +425,7 @@ input, select{
 }
 textarea{
 	width: 100%;
-	padding: 1rem;
+	padding: 2rem;
 	border: 0.1rem solid #FAEFE0;
 	border-radius: 0.5rem;
 	margin-bottom: 0.6rem;
@@ -448,7 +448,7 @@ textarea{
 
 /* TEXTAREA */
 textarea{
-	min-height: 120px;
+	min-height: 10rem;
 }
 
 /* BOUTON */
@@ -456,7 +456,7 @@ button{
 	background-color: #4E032A;
 	color: white;
 	border: none;
-	padding: 10px 20px;
+	padding: 1rem 2rem;
 	cursor: pointer;
 	width: fit-content;
 }
@@ -464,7 +464,7 @@ button{
 /* MAP */
 .map{
 	width: 100%;
-	height: 300px;
+	height: 27rem;
 	border: 0;
 }
 
