@@ -84,7 +84,8 @@ div.hero-header{
 	background-image: url("../img/header-bg.jpg");
 	background-size: cover;
 	background-position: center;
-	height: 50rem;
+	height: 100rem;
+	width: auto;
 	text-align: center;
 	padding: 5rem;
 	align-content: center;
