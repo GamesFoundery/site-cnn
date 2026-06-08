@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles_phone.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<title>Cercle Numismatique de Nîmes</title>
+	<link rel="icon" type="image/jpg" href="../img/logo_blc.ico">
+</head>
+<body>
+	<header class="header">
+		<div class="header-left">
+			<img src="../img/logo_nr.PNG" class="logo">
+			<h3 class="header-title">
+				CERCLE NUMISMATIQUE DE NÎMES
+			</h3>
+		</div>
+		<div class="header-right">
+			<nav class="header-nav">
+				<ul>
+					<li class="btn">
+						<a href="../index.html">
+							Accueil
+						</a>
+					</li>
+					<li class="btn">
+						<a href="../news.html">
+							Actualités
+						</a>
+					</li>
+					<li class="btn">
+						<a href="../articles.html">
+							Articles
+						</a>
+					</li>
+					<li class="btn">
+						<a href="../about.html">
+							à propos
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="menu-toggle" id="menuToggle">
+			    <span></span>
+			    <span></span>
+			    <span></span>
+  			</div>
+		</div>
+		
+	</header>
+
+	<div class="side-menu" id="sideMenu">
+		<div class="close-menu-btn" id="closeMenuBtn" style="position: absolute; top: -15px; right: 15px; color: white; font-size: 85px; cursor: pointer; z-index: 3000;">
+        &times;
+    	</div>
+	  	<ul>
+			<li class="btn">
+				<a href="../index.html">
+						Accueil
+				</a>
+			</li>
+			<li class="btn">
+				<a href="../news.html">
+					Actualités
+				</a>
+			</li>
+			<li class="btn">
+				<a href="../articles.html">
+					Articles
+				</a>
+			</li>
+			<li class="btn">
+				<a href="../about.html">
+					à propos
+				</a>
+				</li>
+		</ul>
+	</div>
+
+	<div class="overlay" id="overlay"></div>
+	<script>
+	  const toggle = document.getElementById('menuToggle');
+	  const menu = document.getElementById('sideMenu');
+	  const overlay = document.getElementById('overlay');
+
+	  // Ouvrir/Fermer le menu
+	  toggle.addEventListener('click', (e) => {
+	    e.stopPropagation(); // Empêche le clic de traverser
+	    toggle.classList.toggle('active');
+	    menu.classList.toggle('active');
+	    overlay.classList.toggle('active');
+	  });
+
+	  // Fermer quand on clique sur l'overlay (le fond sombre)
+	  overlay.addEventListener('click', () => {
+	    toggle.classList.remove('active');
+	    menu.classList.remove('active');
+	    overlay.classList.remove('active');
+	  });
+
+	  // IMPORTANT : Empêcher la fermeture quand on clique DANS le menu
+	  menu.addEventListener('click', (e) => {
+	    e.stopPropagation();
+	  });
+	  const closeBtn = document.getElementById('closeMenuBtn');
+		if(closeBtn) {
+    	closeBtn.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+        overlay.classList.remove('active');
+    	});
+	}
+	</script>
+	
+	<div class="article-page">
+		<div class="article-container">
+
+		  <h1 class="article-title">
+			La prochaine réunion du Cercle
+		  </h1>
+
+		  <div class="article-meta">
+			<p>Par <strong>Cercle Numismatique de Nîmes</strong> · 25 mars 2026 </p>
+		  </div>
+
+		  <img src="../img/header-bg.webp" class="article-image">
+
+		  <div class="article-content">
+
+			<p>
+			  La prochaine réunion du cercle numismatique de Nîmes est programmée pour le 10 avril 2026. Elle se tiendra aux lieux et aux horaires habituels, à partir de 17h45 et jusqu'à 20h, dans la salle de réunion de la Banque Populaire du Sud au 6 Rue des Halles, 30 000, Nîmes.  
+			</p>
+
+			<h3 class="subtitle">Sujet et auteur de l'intervention</h2>
+
+			<p>
+			  Contrairement à ce que l’on pourrait penser, il n’est pas nécessaire de disposer d’un budget important pour débuter une collection. De nombreuses pièces restent accessibles et permettent de constituer progressivement une collection riche et variée.
+			  Les clubs et associations jouent également un rôle essentiel en permettant aux collectionneurs d’échanger, d’apprendre et de partager leur passion.
+			</p>
+
+			<h3 class="subtitle">Un lien avec l’histoire</h2>
+
+			<p>
+			  Chaque monnaie est un témoin de son époque. Elle peut révéler des informations précieuses sur les dirigeants, les événements marquants ou encore les échanges commerciaux.
+			  Étudier les monnaies, c’est donc aussi mieux comprendre le passé et les évolutions du monde.
+			</p>
+			<button class="base-btn">
+				<a href="../index.html" class="btn-link">
+					Retour à l'accueil 
+				</a>	
+			</button>
+
+		  </div>
+
+		</div>
+	</div>
+	
+	<footer class="footer">
+		<div class="first-column">
+			<h3 class="header-title">
+				CERCLE NUMISMATIQUE DE NÎMES
+			</h3>
+		</div>
+		<div class="second-column">
+			<nav class="footer-nav">
+				<ul>
+					<li class="footer-btn">
+						<a href="../index.html">
+							Accueil
+						</a>
+					</li>
+					<li class="footer-btn">
+						<a href="../news.html">
+							Actualités
+						</a>
+					</li>
+					<li class="footer-btn">
+						<a href="../articles.html">
+							Articles
+						</a>
+					</li>
+					<li class="footer-btn">
+						<a href="../about.html">
+							à propos
+						</a>
+					</li>
+				</ul>
+			</nav>		
+		</div>
+		<div class="third-column">
+			<p>
+				Siège social de l'association :
+			</p>
+			<p>
+				Nîmes Collections <br>
+				13 Rue de la Curaterie <br>
+				30000 Nîmes
+			</p>
+		</div>
+		<div class="fourth-column">
+				<a href="contact.html" class="base-btn">
+					Contactez-nous
+				</a>
+				<div class="socials">
+					<a href="https://www.facebook.com/groups/clubnumismatiquenimois/" target="_blank" class="social-btn">
+    					<i class="fa-brands fa-facebook-f" style="color : rgb(255, 255, 255);"></i>
+  					</a>
+  					<a href="mailto:contact@cerclenumismatiquenimes.fr" target="_blank" class="social-btn">
+    					<i class="fa-solid fa-envelope" style="color : rgb(255, 255, 255);"></i>
+  					</a>
+  					<a href="tel: +33637631553" target="_blank" class="social-btn">
+    					<i class="fa-solid fa-phone" style="color: rgb(255, 255, 255);"></i>
+  					</a>
+				</div>
+			</button>
+		</div>
+	</footer>
+	
+</body>
