@@ -261,8 +261,9 @@ h3.subtitle{
 
 .section-title{
 	font-family: Garamond;
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: 900;
+	margin: 1.5rem auto;
 }
 
 img.section-img{
@@ -271,7 +272,14 @@ img.section-img{
 	position: center;
 	background-size: cover;
 	margin: 0 auto;
+	border-radius: 1rem;
 }
+
+img.section-img:hover{
+	transform: rotate(0.5deg);
+	transition: 0.1s all;
+}
+
 
 img.article-img{
 	display: block;
@@ -284,8 +292,13 @@ img.article-img{
 }
 
 p.section-text{
-	line-height: 2;
+	line-height: 2rem;
 }
+
+.section-list{
+	line-height: 2rem;
+}
+
 
 /* BUTTONS */
 
