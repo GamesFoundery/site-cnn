@@ -127,6 +127,7 @@ p.section-text{
 	border-radius: 10rem;
 	text-decoration: none;
 	font-weight: 600;
+	margin: 1rem 1rem;
 }
 
 .base-btn:hover{
