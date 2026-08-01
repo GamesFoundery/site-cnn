@@ -105,13 +105,13 @@
 		color: var(--date-color);
 	}
     .article-image {
-        aspect-ratio: 16 / 10;
+        aspect-ratio: 4 / 3;
         border-radius: var(--image-radius);
         overflow: hidden;
         background: #d8cba0;
         width: 100%;
         height: 100%;
-        object-fit: cover;     /* <- this is what makes any image size/shape fit the same box */
+        object-fit: contain;     /* <- this is what makes any image size/shape fit the same box */
         object-position: center;
         display: block;
 		margin-bottom: 0.6rem;

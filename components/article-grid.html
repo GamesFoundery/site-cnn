@@ -1,0 +1,163 @@
+<!-- Dans le body -->
+<div class="grid">
+			<div class="article-card">
+				<div class="article-card__image-wrap">
+					<img src="/news/img/30_06_26_img001.webp" alt="">
+				</div>
+				<div class="article-card__body">
+					<div class="article-card__meta">
+						<span class="article-card__category">Cercle Numismatique de Nîmes</span>
+						<span class="article-card__date">30/06/2026</span>
+					</div>
+					<h3 class="article-card__title">Congés estivaux du Cercle Numismatique</h3>
+					<p class="article-card__excerpt">Après une année riche en numismatique, les membres partent en vacances pour la période estivale…</p>
+					<span class="base-btn"><a href="/news/30_06_26.html" class="base-btn">Lire la suite</a></span>
+				</div>
+			</div>
+			<div class="article-card">
+				<div class="article-card__image-wrap">
+					<img src="/news/img/20_05_26_img001.webp" alt="">
+				</div>
+				<div class="article-card__body">
+					<div class="article-card__meta">
+						<span class="article-card__category">Cercle Numismatique de Nîmes</span>
+						<span class="article-card__date">20/05/2026</span>
+					</div>
+					<h3 class="article-card__title">Sortie annuelle de l'association à Uzès</h3>
+					<p class="article-card__excerpt">Compte rendu de la sortie annuelle du Cercle Numismatique en visite à Uzès…</p>
+					<span class="base-btn"><a href="/news/20_05_26.html" class="base-btn">Lire la suite</a></span>
+				</div>
+			</div>
+			<div class="article-card">
+				<div class="article-card__image-wrap">
+					<img src="/news/img/25_03_26_img001.webp" alt="">
+				</div>
+				<div class="article-card__body">
+					<div class="article-card__meta">
+						<span class="article-card__category">Cercle Numismatique de Nîmes</span>
+						<span class="article-card__date">25/03/2026</span>
+					</div>
+					<h3 class="article-card__title">Réunion du Cercle Numismatique en avril 2026</h3>
+					<p class="article-card__excerpt">La prochaine réunion du cercle est prévue le 10 avril 2026…</p>
+					<span class="base-btn"><a href="/news/25_03_26.html" class="base-btn">Lire la suite</a></span>
+				</div>
+			</div>
+</div>
+
+<!-- Après le body -->
+<style class="article-grid-style">
+		:root {
+			--card-bg: #F1D2A7;
+			--card-radius: 1rem;
+			--image-radius: 0.5rem;
+			--category-color: #70053c ;
+			--date-color: #3f3f3f;
+			--title-color: #000000;
+			--excerpt-color: #303030;
+			--font-serif: Garamond;
+			--font-sans: Montserrat
+		}
+
+		/* Grid to show the design stays identical no matter the source image */
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2rem;
+			width: 100%;
+			padding: 2rem 5rem;
+			margin: 0 auto;
+			padding-bottom: 8rem;
+		}
+
+		.article-card {
+			background: var(--card-bg);
+			border-radius: var(--card-radius);
+			padding: 1rem;
+			padding-bottom: 2rem;
+			display: flex;
+			flex-direction: column;
+		}
+		.article-card:hover {
+			transform: scale(1.005);
+		}
+
+		/* Fixed-ratio window: any uploaded image is cropped/filled identically */
+		.article-card__image-wrap {
+			width: 100%;
+			aspect-ratio: 16 / 10;
+			border-radius: var(--image-radius);
+			overflow: hidden;
+			background: #d8cba0; /* placeholder while loading */
+		}
+
+		.article-card__image-wrap img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;     /* <- this is what makes any image size/shape fit the same box */
+			object-position: center;
+			display: block;
+		}
+
+		.article-card__body {
+			padding: 1rem 0.5rem 0;
+		}
+
+		.article-card__meta {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 0.8rem;
+			margin-bottom: 0.6rem;
+		}
+
+		.article-card__category {
+			font-weight: 700;
+			color: var(--category-color);
+		}
+
+		.article-card__date {
+			color: var(--date-color);
+		}
+
+		.article-card__title {
+			font-family: var(--font-serif);
+			font-weight: 700;
+			font-size: 1.5rem;
+			line-height: 2rem;
+			color: var(--title-color);
+			margin: 0 0 10px;
+		}
+
+		.article-card__excerpt {
+			color: var(--excerpt-color);
+			font-size: 1rem;
+			line-height: 1.5rem;
+			margin: 0 0 3rem;
+		}
+
+		.base-btn{
+			background-color: #70053c;
+			padding: 0.8rem 1.5rem;
+			border: 0;
+			font-family: Montserrat;
+			color: #FFFFFF;
+			align-content: right;
+			border-radius: 10rem;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.base-btn:hover{
+			background-color: #3B0220;
+			border: 0;
+			font-family: Montserrat;
+		}
+
+		.base-btn .btn-link{
+			text-decoration: none;
+			color: #FFFFFF;
+			font-weight: 600;
+			font-size: 0.8rem;
+		}
+</style>
